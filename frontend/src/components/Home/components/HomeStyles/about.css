@@ -1,0 +1,79 @@
+.code-ethics {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .learn-more {
+    color: #6a0dad;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .ethics-image img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    float: right;
+    margin-top: -100px;
+    border-radius: 4px;
+  }
+  
+  .section {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #ddd;
+  }
+  
+  .toggle-icon {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  
+  .section-content {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+  }
+  
+
+  .about .section-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .about .section-content.open {
+    max-height: 1000px; /* Set a high enough value to fit your content */
+    opacity: 1;
+  }
+  
+
+  .card-cover:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .card-cover {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .card-back {
+    transform: rotateY(0deg);
+  }
+  

@@ -1,0 +1,54 @@
+.projects-section {
+    padding: 0;
+    margin: 0 !important;
+    background-color: #000 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    width: 100%;
+    position: relative; /* Make sure the parent is relative */
+}
+
+.text-background {
+    position: absolute;
+    font-size: 10vw; /* Responsive font size */
+    font-weight: bold;
+    color: white; /* Main text color */
+    z-index: 1; /* Ensure content text is on top */
+    text-align: center; /* Ensure text is centered */
+}
+
+.text-background::before {
+    content: "What We’ve Built"; /* Text as background */
+    position: absolute;
+    margin: 0 auto;
+    transform: translate(-50%, -50%); /* Proper centering */
+    font-size: 8vw; /* Responsive background text size */
+    font-weight: bold;
+    color: rgba(83, 75, 75, 0.521); /* Light color for the background text */
+    z-index: -1; /* Ensure the background text is behind the content */
+    white-space: nowrap;
+    text-align: center; /* Center the background text */
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    .text-background {
+        font-size: 15vw; /* Adjust font size for smaller screens */
+    }
+
+    .text-background::before {
+        font-size: 5vw; /* Adjust background text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-background {
+        font-size: 18vw; /* Adjust font size even smaller */
+    }
+
+    .text-background::before {
+        font-size: 3vw; /* Increase background text size */
+    }
+}
